@@ -13,6 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'PagesController@data');
+Route::get('/pasien0226', 'PagesController@pasien');
+Route::get('/dokter0226', 'PagesController@dokter');
+Route::get('/kamar0226', 'PagesController@kamar');
+
+//kontroller1
+Route::get('/', 'JoinController@index');
+
+//kontroller2
+Route::get('/pasien0226', 'PasienController@index');
+Route::get('/tambahpasien0226', 'PasienController@create');
+Route::post('/pasien0226', 'PasienController@store');
+
+//kontroller3
+Route::get('/dokter0226', 'DokterController@index');
+Route::get('/tambahdokter0226', 'DokterController@create');
+Route::post('/dokter0226', 'DokterController@store');
+
+//kontroller4
+Route::get('/kamar0226', 'KamarController@index');
+Route::get('/tambahkamar0226', 'KamarController@create');
+Route::post('/kamar0226', 'KamarController@store');
+
+
+
+
+
+
