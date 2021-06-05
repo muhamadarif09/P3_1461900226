@@ -26,7 +26,8 @@
       <td>{{$psn->nama}}</td>
       <td>{{$psn->alamat}}</td>
       <td>
-      <a class="btn btn-primary" href="" role="button">Edit</a>
+      <a class="btn btn-primary" href="{{url('pasien/' . $psn->id) . '/edit' }}" role="button">Edit</a>
+      <a class="btn btn-danger" href="#" role="button">Hapus</a>
       </td>
     </tr>
     @endforeach

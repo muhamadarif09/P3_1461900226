@@ -85,7 +85,13 @@ class PasienController extends Controller
      */
     public function update(Request $request, Pasien $pasien)
     {
-        //
+        $pasien = Pasien::find($id);
+        $pasien->nama = $request->nama;
+        $pasien->alamat = $request->alamat;
+
+        $pasien->save();
+
+        return redirect('pasien0226');
     }
 
     /**

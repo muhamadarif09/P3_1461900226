@@ -29,6 +29,8 @@ Route::get('/', 'JoinController@index');
 Route::get('/pasien0226', 'PasienController@index');
 Route::get('/tambahpasien0226', 'PasienController@create');
 Route::post('/pasien0226', 'PasienController@store');
+Route::get('/editpasien0226', 'PasienController@edit');
+
 
 //kontroller3
 Route::get('/dokter0226', 'DokterController@index');
