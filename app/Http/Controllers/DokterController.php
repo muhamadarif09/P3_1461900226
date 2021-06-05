@@ -64,7 +64,7 @@ class DokterController extends Controller
      */
     public function edit(Dokter $dokter)
     {
-        //
+        return view('editdokter0226', ['dokter' => $dokter]);
     }
 
     /**
@@ -76,7 +76,12 @@ class DokterController extends Controller
      */
     public function update(Request $request, Dokter $dokter)
     {
-        //
+        $dokter->nama = $request->nama;
+        $dokter->jabatan = $request->jabatan;
+
+        $dokter->save();
+
+        return redirect('dokter0226');
     }
 
     /**

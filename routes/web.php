@@ -37,6 +37,8 @@ Route::patch('/pasien/{pasien}', 'PasienController@update');
 Route::get('/dokter0226', 'DokterController@index');
 Route::get('/tambahdokter0226', 'DokterController@create');
 Route::post('/dokter0226', 'DokterController@store');
+Route::get('/dokter/{dokter}', 'DokterController@edit');
+Route::patch('/dokter/{dokter}', 'DokterController@update');
 
 //kontroller4
 Route::get('/kamar0226', 'KamarController@index');
