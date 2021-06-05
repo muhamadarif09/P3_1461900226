@@ -26,7 +26,7 @@
       <td>{{$kmr->id_pasien}}</td>
       <td>{{$kmr->id_dokter}}</td>
       <td>
-      <a class="btn btn-primary" href="" role="button">Edit</a>
+      <a class="btn btn-primary" href="/kamar/{{$kmr->id}}" role="button">Edit</a>
       <a class="btn btn-danger" href="#" role="button">Hapus</a>
       </td>
     </tr>

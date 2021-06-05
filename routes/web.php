@@ -44,6 +44,8 @@ Route::patch('/dokter/{dokter}', 'DokterController@update');
 Route::get('/kamar0226', 'KamarController@index');
 Route::get('/tambahkamar0226', 'KamarController@create');
 Route::post('/kamar0226', 'KamarController@store');
+Route::get('/kamar/{kamar}', 'KamarController@edit');
+Route::patch('/kamar/{kamar}', 'KamarController@update');
 
 
 

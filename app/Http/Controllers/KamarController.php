@@ -61,9 +61,9 @@ class KamarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Kamar $kamar)
     {
-        //
+        return view('editkamar0226', ['kamar' => $kamar]);
     }
 
     /**
@@ -73,9 +73,14 @@ class KamarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Kamar $kamar)
     {
-        //
+        $kamar->id_pasien = $request->id_pasien;
+        $kamar->id_dokter = $request->id_dokter;
+
+        $kamar->save();
+
+        return redirect('kamar0226');
     }
 
     /**
