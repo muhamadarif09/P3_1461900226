@@ -72,7 +72,6 @@ class PasienController extends Controller
      */
     public function edit(Pasien $pasien)
     {
-        $pasien = Pasien::find($id);
         return view('editpasien0226', ['pasien' => $pasien]);
     }
 
@@ -85,7 +84,7 @@ class PasienController extends Controller
      */
     public function update(Request $request, Pasien $pasien)
     {
-        $pasien = Pasien::find($id);
+        
         $pasien->nama = $request->nama;
         $pasien->alamat = $request->alamat;
 
